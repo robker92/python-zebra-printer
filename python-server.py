@@ -13,7 +13,7 @@ def print_label():
 
     # Send ZPL to printer (replace 'ZebraPrinter' with CUPS printer name)
     process = subprocess.run(
-        ["lp", "-d", "ZebraPrinter"],  # CUPS command
+        ["lp", "-d", "Zebra_Technologies_ZTC_ZD220-203dpi_ZPL"],  # CUPS command
         input=zpl.encode('utf-8'),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
