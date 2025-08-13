@@ -1,0 +1,15 @@
+GET http://127.0.0.1:5000
+
+#######################
+
+POST http://172.19.168.18:5000/print
+content-type: application/json
+
+{
+    "zpl": "^XA^FO50,50^ADN,36,20^FDHello Philipp^FS^XZ"
+}
+
+# http://172.19.168.18:5000/print
+# "^XA^FO50,50^ADN,36,20^FDHello Philipp^FS^XZ"
+#######################
+GET http://172.19.168.18:5000
