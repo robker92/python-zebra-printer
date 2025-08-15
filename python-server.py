@@ -18,11 +18,13 @@ def send_to_zebra(zpl_string, printer_name=PRINTER_NAME):
     print(zpl.encode('utf-8'))
     # return "ok", 200
 
-    proc = subprocess.Popen(
-        ["lp", "-d", printer_name],
-        stdin=subprocess.PIPE
-    )
-    proc.communicate(input=zpl_string.encode('utf-8'))
+    subprocess.run(["lp", "-d", printer_name, "-o", "raw"], input=zpl_string.encode("utf-8"))
+
+    # proc = subprocess.Popen(
+    #     ["lp", "-d", printer_name],
+    #     stdin=subprocess.PIPE
+    # )
+    # proc.communicate(input=zpl_string.encode('utf-8'))
     
     # Send ZPL to printer (replace 'ZebraPrinter' with CUPS printer name)
     # process = subprocess.run(
