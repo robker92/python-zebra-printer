@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import subprocess
 
 app = Flask(__name__)
-PRINTER_NAME = "ZebraPrinter"
+PRINTER_NAME = "Zebra_Technologies_ZTC_ZD220-203dpi_ZPL"
 
 @app.route("/", methods=["GET"])
 def hello_world():

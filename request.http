@@ -2,7 +2,7 @@ GET http://127.0.0.1:5000
 
 #######################
 
-POST http://172.19.168.18:5000/print
+POST http://192.168.2.57:5000/print
 content-type: application/json
 
 {
